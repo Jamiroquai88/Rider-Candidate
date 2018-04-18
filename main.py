@@ -1,6 +1,10 @@
 import argparse
 
 
+TEST_OUTPUT_FILE = 'test.txt'
+TRAIN_OUTPUT_FILE = 'train.txt'
+
+
 def load_data():
     """ Load input data. """
     pass
@@ -24,7 +28,7 @@ def dump_output():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Python clustering of embeddings.')
     parser.add_argument('-i', type=str, required=True, help='path to input embeddings in cPickle format')
-    parser.add_argument('-o', type=str, required=True, help='path to output segmentation file')
+    parser.add_argument('-o', type=str, required=True, help='path to output directory')
     parser.add_argument('--lda', type=str, required=False, help='path to LDA model in .npy format')
 
     args = parser.parse_args()
